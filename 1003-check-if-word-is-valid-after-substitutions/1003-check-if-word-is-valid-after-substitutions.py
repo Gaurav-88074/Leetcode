@@ -1,5 +1,5 @@
-class Solution:
-    def isValid(self, s: str) -> bool:
+class Solution(object):
+    def isValid(self, s):
         if len(s)<3:return False
         
         stack = []
@@ -11,4 +11,4 @@ class Solution:
                 stack.pop()
                 stack.pop()
         return len(stack)==0
-            
+        
