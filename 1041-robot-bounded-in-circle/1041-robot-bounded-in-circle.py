@@ -30,12 +30,9 @@ class Solution:
         #------------------
         head = north;
         #------------------
-        index = 0
-        steps = 0
-        c=0
-        # while True:
+        
         for i in instructions:
-            # i = instructions[index]
+            
             
             if i=="L":
                 head=head.prev
@@ -50,13 +47,5 @@ class Solution:
                     x+=1
                 if head.data == "W":
                     x-=1
-            # print(x,y,head.data)
-            # index+=1
-            # index%=len(instructions)
-            # steps+=1
-            # print(x,y,steps)
-            # if x==0 and y==0 : c+=1
-            # if x==0 and y==0 and c>=2: return True 
-            # if steps==(10*len(instructions)) :return False
-        # print(x,y)
+            
         return x==0 and y==0 or head.data!="N"
