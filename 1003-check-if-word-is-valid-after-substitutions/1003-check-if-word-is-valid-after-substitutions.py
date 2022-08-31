@@ -6,7 +6,7 @@ class Solution:
         for i in s:
             stack.append(i)
             # print(stack)
-            if len(stack)>=3 and stack[-3]+stack[-2]+stack[-1]=="abc":
+            if len(stack)>=3 and stack[-3]=="a" and stack[-2]=="b" and stack[-1]=="c":
                 stack.pop()
                 stack.pop()
                 stack.pop()
