@@ -31,7 +31,6 @@ class Solution {
         }
         // System.out.println(pq);
         int index = 0;
-        int ind = 0;
             
         while(pq.size()!=0){
             var obj1 = pq.poll();
