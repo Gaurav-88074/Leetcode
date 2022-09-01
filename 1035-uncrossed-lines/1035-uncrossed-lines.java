@@ -1,9 +1,9 @@
 class Solution {
-    public int LCS(int m,int n,int[] nums1, int[] nums2,int[][] dp){
+    public int LCS(int m,int n,int[] nums1, int[] nums2,Integer[][] dp){
         if(m==-1 ||n==-1){
             return 0;
         }
-        if(dp[m][n]!=-1){
+        if(dp[m][n]!=null){
             return dp[m][n];
         }
         if(nums1[m] == nums2[n]){
@@ -21,10 +21,10 @@ class Solution {
         int n = nums2.length;
         
         
-        int[][] dp = new int[m][n];
-        for(int[] arr : dp){
-            Arrays.fill(arr,-1);
-        }
+        Integer[][] dp = new Integer[m][n];
+        // for(Integer[] arr : dp){
+        //     Arrays.fill(arr,-1);
+        // }
         int lcs = LCS(m-1,n-1,nums1,nums2,dp);
         return lcs;
     }
