@@ -1,5 +1,5 @@
-class Solution:
-    def getSmallestString(self, n: int, k: int) -> str:
+class Solution(object):
+    def getSmallestString(self, n, k):
         res = []
         while n>0:
             v = k+1 - n
@@ -13,5 +13,4 @@ class Solution:
         res.reverse()
         # print(res)
         return "".join(res)
-                
-            
+        
