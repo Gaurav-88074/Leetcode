@@ -1,9 +1,10 @@
 class Solution:
     def findLonely(self, nums: List[int]) -> List[int]:
-        s = Counter(nums)
+        c = Counter(nums)
+        s =set(nums)
         res = []
         for i in nums:
-            if not i+1 in s and not i-1 in s and s[i]==1:
+            if not i+1 in s and not i-1 in s and c[i]==1:
                 res.append(i)
                 
         return res
