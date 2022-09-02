@@ -7,7 +7,7 @@ class Solution {
         }
         if(grid1[x][y] == 0){
             isPossible = false;
-            return;
+            // return;
         }
         grid2[x][y]=0;
         
