@@ -1,5 +1,5 @@
-class Solution:
-    def minimumCardPickup(self, cards: List[int]) -> int:
+class Solution(object):
+    def minimumCardPickup(self, cards):
         d = dict()
         res = 100001
         
