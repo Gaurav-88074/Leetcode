@@ -1,6 +1,7 @@
 class Solution(object):
     def numberOfWays(self, s, e, k):
         dp = dict()
+        mod = 10**9 + 7
         def compute(s,e,k):
             if k==0 and s==e:
                 # print("yes")
@@ -12,6 +13,7 @@ class Solution(object):
                 return dp[key]
             # return sum([compute(s+1,e,k-1),compute(s-1,e,k-1)])
             dp[key] =  compute(s+1,e,k-1) + compute(s-1,e,k-1)
+            dp[key]%=mod
             return dp[key]
         res = compute(s,e,k)
         # print(res)
