@@ -9,7 +9,7 @@ class Solution:
             if d[i]>0:
                 arr.append(d[i])
         arr.sort(reverse=True)
-        print(arr)
+        # print(arr)
         res = 0
         pre = float('inf')
         
@@ -19,7 +19,7 @@ class Solution:
                 v.append(arr[i])
             else:
                 v.append(v[-1]-1)
-        print(v)
+        # print(v)
         for i in range(len(arr)):
             if v[i]<0:
                 res+=arr[i]
