@@ -20,17 +20,13 @@ class Solution:
             else:
                 v.append(v[-1]-1)
             #-------------
+            
+            #-------------
+        # print(v)
+        for i in range(len(arr)):
             if v[i]<0:
                 res+=arr[i]
                 continue
-            if arr[i]!=v[i]:
-                res+=abs(arr[i]-v[i])
-            #-------------
-        # print(v)
-        # for i in range(len(arr)):
-        #     if v[i]<0:
-        #         res+=arr[i]
-        #         continue
-        #     if arr[i]!=v[i]:res+=abs(arr[i]-v[i])
+            if arr[i]!=v[i]:res+=abs(arr[i]-v[i])
                 
         return res 
