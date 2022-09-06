@@ -1,5 +1,5 @@
-class Solution:
-    def minDeletions(self, s: str) -> int:
+class Solution(object):
+    def minDeletions(self, s):
         d = [0]*26
         for i in range(len(s)):
             d[ord(s[i])-97]+=1
@@ -30,3 +30,4 @@ class Solution:
             if arr[i]!=v[i]:res+=abs(arr[i]-v[i])
                 
         return res 
+        
