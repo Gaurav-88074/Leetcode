@@ -1,11 +1,11 @@
 # Definition for a binary tree node.
-# class TreeNode(object):
+# class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
 #         self.val = val
 #         self.left = left
 #         self.right = right
-class Solution(object):
-    def tree2str(self, root):
+class Solution:
+    def tree2str(self, root: Optional[TreeNode]) -> str:
         res  =[]
         def compute(root):
             if not root : 
@@ -35,4 +35,3 @@ class Solution(object):
         compute(root)
         # print(res)
         return "".join(res)
-        
