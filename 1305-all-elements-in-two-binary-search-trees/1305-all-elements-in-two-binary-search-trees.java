@@ -21,12 +21,39 @@ class Solution {
         inOrder(root.right,l);
     }
     public List<Integer> getAllElements(TreeNode root1, TreeNode root2) {
-        List<Integer> a = new ArrayList<>();
-        List<Integer> b = new ArrayList<>();
-        inOrder(root1,a);
-        inOrder(root2,b);
-        a.addAll(b);
-        Collections.sort(a);
-        return a;
+        List<Integer> nodes1 = new ArrayList<>();
+        List<Integer> nodes2 = new ArrayList<>();
+        inOrder(root1,nodes1);
+        inOrder(root2,nodes2);
+        
+        List<Integer> ans = new ArrayList<Integer>();
+        int i1 = 0;
+        int i2 = 0;
+        while (i1 < nodes1.size() && i2 < nodes2.size()){
+            int val1 = nodes1.get(i1);
+            int val2 = nodes2.get(i2);
+            if (val1 == val2){
+                ans.add(val1);
+                ans.add(val2);
+                i1++;
+                i2++;
+            }
+            else if (val1 < val2){
+                ans.add(val1);
+                i1++;
+            }
+            else{
+                ans.add(val2);
+                i2++;
+            }
+        }
+        
+        while (i1 < nodes1.size())
+            ans.add(nodes1.get(i1++));
+        while (i2 < nodes2.size())
+            ans.add(nodes2.get(i2++));
+        
+        return ans;
+        
     }
 }
