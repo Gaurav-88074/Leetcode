@@ -18,17 +18,6 @@ class Solution:
     
             stack.append(properties[i][1])
         #----------------------------------------------
-#         vrr = [0]*len(properties)
-        
-#         stack = [-1]
-#         for i in range(len(properties)-1,-1,-1):
-#             while stack[-1]!=-1 and stack[-1]<=properties[i][0]:
-#                 stack.pop()
-#             vrr[i] = stack[-1]
-    
-#             stack.append(properties[i][0])
-        #------------------------------------------------
-        # print(vrr)
         # print(arr)
         for i in range(len(properties)):
             if arr[i]!=-1 :
