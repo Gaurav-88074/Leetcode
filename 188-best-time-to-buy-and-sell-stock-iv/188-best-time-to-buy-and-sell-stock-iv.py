@@ -1,15 +1,19 @@
-class Solution:
-    def maxProfit(self, k: int, prices: List[int]) -> int:
+class Solution(object):
+    def maxProfit(self, k, prices):
         #state
         #sell 0
         #buy  1
-        @lru_cache(None)
+        # @lru_cache(None)
+        dp = {}
         def compute(k,index,state):
             if index==len(prices): return 0
             
             if k==0 : return 0
             
-            res = 0
+            key = (k,index,state)
+            
+            if key in dp : return dp[key]
+            
             buyValue = 0
             sellValue= 0
             skip = 0
@@ -23,5 +27,8 @@ class Solution:
             
             skip = compute(k,index+1,state)
             
-            return max(buyValue,sellValue,skip)
+            res = max(buyValue,sellValue,skip)
+            dp[key] = res
+            return res
         return compute(k,0,1)
+        
