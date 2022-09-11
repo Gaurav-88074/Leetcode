@@ -1,6 +1,5 @@
-class Solution:
-    def longestCommonPrefix(self, strs: List[str]) -> str:
-        index = 0
+class Solution(object):
+    def longestCommonPrefix(self, strs):
         m = min([len(strs[i]) for i in range(len(strs))])
         # print(m)
         res = []
@@ -16,4 +15,4 @@ class Solution:
             else:
                 break
         return "".join(res)
-            
+        
