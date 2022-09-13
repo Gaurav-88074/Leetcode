@@ -27,11 +27,11 @@ class Solution {
         return (index7 && index6);
     }
     public boolean compute(int[] data,int in){
-        System.out.println("for index : "+in);
-        System.out.println("value : "+data[in]);
+        // System.out.println("for index : "+in);
+        // System.out.println("value : "+data[in]);
         int start = data[in];
         int n = countLastSet(start);
-        System.out.println("bit count : "+n);
+        // System.out.println("bit count : "+n);
         if(n==1 || n>4)return false;
         
         int i;
