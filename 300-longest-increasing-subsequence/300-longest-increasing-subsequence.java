@@ -8,22 +8,22 @@ class Solution {
         int take =0;
         if(preIndex==-1 || nums[index]>nums[preIndex]){
             take = 1 + compute(nums,index+1,index);
-//             int skip = compute(nums,index+1,preIndex);
-            
-//             dp[index][preIndex+1] = Math.max(take,skip);
-            
-//             return dp[index][preIndex+1];
         }
         
         int skip = compute(nums,index+1,preIndex);
         
         int res = Math.max(take,skip);
+        
         dp[index][preIndex+1] = res;
         
         return res;
     }
     public int lengthOfLIS(int[] nums) {
+        if(nums.length==1)return 1;
+        
         dp = new Integer[nums.length+1][nums.length+1];
-        return compute(nums,0,-1);
+        
+        int res = compute(nums,0,-1);
+        return res;
     }
 }
