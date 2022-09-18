@@ -20,9 +20,12 @@ class Solution:
             
             if i%2!=0:
                 arr = d[i]
-                values = [arr[-i].val  for i in range(1,len(arr)+1)]
-                for i in range(len(arr)):
-                    arr[i].val = values[i]
+                left = 0
+                right=len(arr)-1
+                while left<right:
+                    arr[left].val,arr[right].val = arr[right].val,arr[left].val
+                    left+=1
+                    right-=1
         return root
 #         def visit(root,level):
 #             if root==None:
