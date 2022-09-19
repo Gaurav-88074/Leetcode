@@ -1,17 +1,5 @@
-class Solution:
-    
-    def countVowelStrings(self, n: int) -> int:
-        
-#         vowels = ["a","e","i","o","u"]
-#         arr = []
-        
-#         @lru_cache(None)
-#         def compute(n,index):
-            
-#             if n==0 : return 1
-            
-#             return sum([ compute(n-1,i) for i in range(index,5)])
-#         return sum([compute(n-1,index) for index in range(5)])
+class Solution(object):
+    def countVowelStrings(self, n):
         res = [5, 15, 35, 70, 126, 210, 330, 
                495, 715, 1001, 1365, 1820, 2380, 
                3060, 3876, 4845, 5985, 7315, 8855, 
@@ -24,3 +12,4 @@ class Solution:
                316251
               ]
         return res[n-1]
+        
