@@ -1,6 +1,9 @@
 class Solution:
     def findDuplicate(self, paths: List[str]) -> List[List[str]]:
         d = defaultdict(list)
+        st = set()
+        res = []
+        
         
         for route in paths:
             vr = route.split(" ")
@@ -13,11 +16,17 @@ class Solution:
                     left,right = file.split("(")
                     # right = right[:-1:]
                     
+                    
                     d[right].append(startRoute +"/"+ left)
-        res = []
-        for array in d.values():
-            if len(array)>1:
-                res.append(array)
+                    keyValue = d[right]
+                    
+                    if len(keyValue)>1 and right not in st:
+                        st.add(right)
+                        res.append(keyValue)
+        
+        # for array in d.values():
+        #     if len(array)>1:
+        #         res.append(array)
         return res
                     
                         
