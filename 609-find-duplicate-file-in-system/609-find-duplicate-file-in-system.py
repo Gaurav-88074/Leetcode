@@ -11,7 +11,7 @@ class Solution:
                 for i in range(1,len(vr)):
                     file = vr[i]
                     left,right = file.split("(")
-                    right = right[:-1:]
+                    # right = right[:-1:]
                     
                     d[right].append(startRoute +"/"+ left)
         res = []
