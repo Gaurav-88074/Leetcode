@@ -12,9 +12,11 @@ class Solution {
         // System.out.println(map);
         int pre = 0;
         int index = 0;
+        char currChar;
+        int thatIndex;
         while(index<s.length()){
-            char currChar = s.charAt(index);
-            int thatIndex = map.get(currChar);
+            currChar = s.charAt(index);
+            thatIndex = map.get(currChar);
             while(index < thatIndex){
                 currChar = s.charAt(index);
                 int ii = map.get(currChar);
