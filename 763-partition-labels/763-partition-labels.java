@@ -14,12 +14,15 @@ class Solution {
         int index = 0;
         char currChar;
         int thatIndex;
+        int ii;
         while(index<s.length()){
             currChar = s.charAt(index);
             thatIndex = map.get(currChar);
             while(index < thatIndex){
                 currChar = s.charAt(index);
-                int ii = map.get(currChar);
+                
+                ii = map.get(currChar);
+                
                 if(ii>thatIndex){
                     thatIndex= ii;
                 }
