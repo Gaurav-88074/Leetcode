@@ -8,4 +8,4 @@ class Solution:
             
 #             output %= 10**9 + 7
 #         return output
-        return int(''.join(bin(x)[2:] for x in range(1, n+1)), 2) % 1_000_000_007
+        return int(''.join(f'{x:b}' for x in range(1, n+1)), 2) % 1_000_000_007
