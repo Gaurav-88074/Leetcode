@@ -8,4 +8,9 @@ class Solution:
             
 #             output %= 10**9 + 7
 #         return output
-        return int(''.join(f'{x:b}' for x in range(1, n+1)), 2) % 1_000_000_007
+        # return int(''.join(bin(x) for x in range(1, n+1)), 2) % 1_000_000_007
+        res = ''
+        for i in range(1,n+1):
+            binar = format(i,"b")
+            res += binar
+        return int(res,2) % ((10**9)+7 )
