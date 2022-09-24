@@ -4,8 +4,10 @@ class Solution {
         int left = 0;
         int right=nums.length-1;
         int res = nums[left]+nums[right];
+        int value;
         while(left<right){
-            res = res>(nums[left]+nums[right]) ? res:nums[left]+nums[right];
+            value = nums[left]+nums[right];
+            res = res>value ? res :value;
             left++;
             right--;
         }
