@@ -10,13 +10,13 @@ class UndergroundSystem:
 
     def checkOut(self, id: int, stationName: str, t: int) -> None:
         enterStation,enterTime = self.d[id]
-        key = enterStation +"-"+ stationName
+        key = (enterStation , stationName)
         self.score[key]+=(t-enterTime)
         self.count[key]+=1
         
 
     def getAverageTime(self, startStation: str, endStation: str) -> float:
-        key = startStation +"-"+ endStation
+        key = (startStation, endStation)
         # print(self.score)
         return self.score[key]/self.count[key]
 
