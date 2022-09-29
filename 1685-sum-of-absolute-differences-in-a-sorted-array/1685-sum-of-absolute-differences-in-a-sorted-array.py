@@ -1,5 +1,5 @@
-class Solution:
-    def getSumAbsoluteDifferences(self, nums: List[int]) -> List[int]:
+class Solution(object):
+    def getSumAbsoluteDifferences(self, nums):
         s = sum(nums)
         prefix=[]
         v =0
@@ -19,3 +19,4 @@ class Solution:
             
             res.append(ans)
         return res
+        
