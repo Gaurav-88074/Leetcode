@@ -1,5 +1,5 @@
-class Solution:
-    def maximumEvenSplit(self, finalSum: int) -> List[int]:
+class Solution(object):
+    def maximumEvenSplit(self, finalSum):
         res = []
         value = finalSum
         s =set()
@@ -18,4 +18,5 @@ class Solution:
             
             v+=2
         return res
+        
         
