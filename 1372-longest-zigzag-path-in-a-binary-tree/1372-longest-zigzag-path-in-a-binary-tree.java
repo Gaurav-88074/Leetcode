@@ -25,21 +25,26 @@ class Solution {
     public int res = 0;
     public void compute(TreeNode root,int dir,int count){
         if(root==null){
-            res = Math.max(res,count-1);
+            
             return;
         }
-        if(dir==0){
-            compute(root.left,1-dir,count+1);
-            compute(root.right,1-dir,0);
+        if(dir==1){
+            compute(root.left,-1,count+1);
+            compute(root.right,1,1);
+        }
+        else if(dir==-1){
+            compute(root.left,-1,1);
+            compute(root.right,1,count+1);
         }
         else{
-            compute(root.left,1-dir,0);
-            compute(root.right,1-dir,count+1);
+            compute(root.left,-1,1);
+            compute(root.right,1,1);
         }
+        res = Math.max(res,count);
         
     }
     public int longestZigZag(TreeNode root) {
-        compute(root ,1,0);
+        // compute(root ,1,0);
         compute(root ,0,0);
         return res;
     }
