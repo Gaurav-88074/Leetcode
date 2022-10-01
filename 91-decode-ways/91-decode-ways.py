@@ -12,15 +12,14 @@ class Solution:
             
             a = 0
             b = 0
-            c = 0
+        
             if newValue<=26:
                 a = compute(index+1,newValue)
             if int(s[index])!=0 and newValue!=int(s[index]):
                 b = compute(index+1,int(s[index]))
             if int(s[index])==0  and newValue>26:
                 return 0
-            # if int(s[index])==0:
-            #     c = compute(index+1,0)
+
                             
-            return a+b+c
+            return a+b
         return compute(0,0)
