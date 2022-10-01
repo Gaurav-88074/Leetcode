@@ -13,14 +13,7 @@
  *     }
  * }
  */
-class Pair{
-    int lm;
-    int rm;
-    public Pair(int a,int b){
-        lm = a;
-        rm = b;
-    }
-}
+
 class Solution {
     public int res = 0;
     public void compute(TreeNode root,int dir,int count){
