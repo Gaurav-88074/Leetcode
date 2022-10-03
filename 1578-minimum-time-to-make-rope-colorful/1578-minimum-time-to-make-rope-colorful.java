@@ -2,13 +2,12 @@ class Solution {
     public int minCost(String colors, int[] neededTime) {
         int c = 0;
         int totalSum = 0;
-        int res  =0;
         int m = 0;
         
         char pre = colors.charAt(0);
         c =1;
         m = neededTime[0];
-        // totalSum = m;
+
         int i;
         for(i =1; i <colors.length() ; i++){
             
