@@ -19,10 +19,10 @@ class Solution:
         m = len(box)
         n = len(box[0])
         
-        res= [[] for i in range(n)]
+        res= [[0]*m for i in range(n)]
         for i in range(m):
             for j in range(n):
-                res[j].append(box[-(i+1)][j])
+                res[j][i] = (box[-(i+1)][j])
         
         
         return res
