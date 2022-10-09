@@ -27,6 +27,6 @@ class Solution(object):
             
             res  = right + down
             dp[x][y][s] = res%mod
-            return res
+            return res%mod
         
         return compute(0,0,0)%mod
