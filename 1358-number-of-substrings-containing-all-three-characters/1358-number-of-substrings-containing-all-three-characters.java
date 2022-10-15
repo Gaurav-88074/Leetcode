@@ -11,7 +11,7 @@ class Solution {
             index = s.charAt(i) - 97;
             d[index]+=1;
             while(check(d)){
-                res=res + s.length()-i;
+                res +=  s.length()-i;
                 d[s.charAt(p)-97]-=1;
                 p+=1;
             }
