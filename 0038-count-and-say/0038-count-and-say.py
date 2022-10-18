@@ -17,8 +17,6 @@ class Solution(object):
         res.append(pre)
         return res
     def countAndSay(self, n):
-        if n==1:
-            return "1"
         
         r = [1]
         for i in range(n-1):
