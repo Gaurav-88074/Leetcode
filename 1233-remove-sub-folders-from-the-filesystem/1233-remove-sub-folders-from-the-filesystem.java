@@ -2,7 +2,7 @@ class node{
     public node[] next ;
     public boolean isEnd = false;
     public node(){
-        this.next = new node[80];
+        this.next = new node[76];
     }
 }
 class Trie {
