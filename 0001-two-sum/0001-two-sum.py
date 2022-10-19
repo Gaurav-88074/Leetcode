@@ -1,5 +1,5 @@
-class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
+class Solution(object):
+    def twoSum(self, nums, target):
         d = defaultdict(set)
         for i in range(len(nums)):
             d[nums[i]].add(i)
@@ -17,4 +17,8 @@ class Solution:
                     return [index,v.pop()]
             index+=1
         return []
+        
+                    
+        
+        
         
