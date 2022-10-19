@@ -2,7 +2,7 @@ class node{
     public node[] next ;
     public boolean isEnd = false;
     public node(){
-        this.next = new node[128];
+        this.next = new node[80];
     }
 }
 class Trie {
@@ -15,19 +15,12 @@ class Trie {
             root.isEnd = true;
             return true;
         }
-        int ch = word.charAt(index);
-        if( root.isEnd==true && 
-            (
-                // index<word.length() 
-                // && 
-                word.charAt(index)=='/'
-            ) 
-            // || 
-            // index+1==word.length() 
-          ){
+        int ch = word.charAt(index)-47;
+        if( root.isEnd==true && word.charAt(index)=='/'){
             return false;
         }
         if(root.next[ch]==null) root.next[ch] = new node();
+        
         return insert(root.next[ch],word,index+1);
     }
     public boolean insert(String word) {
