@@ -10,7 +10,9 @@ class Solution(object):
             if len(v)!=0:
                 if check==i and len(v)>=2:
                     # print("1")
-                    return list(v)[:2]
+                    second = v.pop()
+                    while second==index: second  = v.pop()
+                    return [index,second]
                 elif (check!=i):
                     # print("2")
                     # print(i,check)
