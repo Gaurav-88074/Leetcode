@@ -10,7 +10,9 @@ class Solution:
                     b = words[j]
                     sa = mask[i]
                     sb = mask[j]
-                    if len(sa.intersection(sb))==0:
+                    # if len(sa.intersection(sb))==0:
+                    #     res = max(len(a)*len(b),res)
+                    if not (sa & sb):
                         res = max(len(a)*len(b),res)
         return res
                     
