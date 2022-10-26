@@ -11,6 +11,6 @@ class Solution:
                 return True
             if mod in d and i-d[mod]>=2:
                 return True
-            elif mod not in d :
+            if mod not in d :
                 d[mod] = i
         return False
