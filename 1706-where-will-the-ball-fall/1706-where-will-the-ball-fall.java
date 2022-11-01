@@ -3,17 +3,23 @@ class Solution {
         if(row==grid.length){
             return index;
         }
-        if(grid[row][index]==1 && (index+1==grid[0].length || grid[row][index+1]==-1)){
-            return -1;
-        }
-        else if(grid[row][index]==-1 && (index-1 == -1 || grid[row][index-1]==1)){
-            return -1;
-        }
-        else if(grid[row][index]==1){
-            return compute(grid,index+1,row+1);
+        if(grid[row][index]==1){
+            if(index+1==grid[0].length || grid[row][index+1]==-1){
+                return -1;
+            }
+            else{
+                return compute(grid,index+1,row+1);
+            }
+            
         }
         else{
-            return compute(grid,index-1,row+1);
+            if(grid[row][index]==-1 && (index-1 == -1 || grid[row][index-1]==1)){
+                return -1;
+            }
+            else{
+                return compute(grid,index-1,row+1);
+            }
+            
         }
         
     }
