@@ -1,5 +1,5 @@
-class Solution:
-    def buddyStrings(self, s: str, goal: str) -> bool:
+class Solution(object):
+    def buddyStrings(self, s, goal):
         if len(s)!=len(goal):return False
         check  =False
         h=defaultdict(int)
@@ -32,3 +32,4 @@ class Solution:
                 if h[s[i]]==4:
                     check = True
         return (check and v==0) or second
+        
