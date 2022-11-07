@@ -1,5 +1,5 @@
-class Solution:
-    def convertToBase7(self, num: int) -> str:
+class Solution(object):
+    def convertToBase7(self, num):
         arr = []
         sign = 1
         if num<0:
@@ -17,4 +17,4 @@ class Solution:
         if sign==-1:
             return "-"+res
         return res
-            
+        
