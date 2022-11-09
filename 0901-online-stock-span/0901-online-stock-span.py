@@ -1,9 +1,9 @@
-class StockSpanner:
+class StockSpanner(object):
 
     def __init__(self):
         self.stack = []
 
-    def next(self, price: int) -> int:
+    def next(self, price) :
         obj = {
             "price" : price,
             "value" : 1
@@ -14,7 +14,7 @@ class StockSpanner:
             obj["value"]+=last["value"]
         self.stack.append(obj)
         return obj["value"]
-            
+        
 
 
 # Your StockSpanner object will be instantiated and called as such:
