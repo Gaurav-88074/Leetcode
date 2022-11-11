@@ -1,5 +1,5 @@
-class Solution:
-    def findAnagrams(self, s: str, p: str) -> List[int]:
+class Solution(object):
+    def findAnagrams(self, s, p):
         res = []
         if len(s)<len(p):
             return res
@@ -29,6 +29,4 @@ class Solution:
             if isPossible(c,target):
                 res.append(index)
         return res
-            
-            
-            
+        
