@@ -16,7 +16,7 @@ class MedianFinder {
         if(q1.size() > q2.size()){
                q2.add(q1.poll());
         }
-        else if(q1.size() ==q2.size() && q1.peek()>q2.peek()){
+        else if(q1.size()==q2.size() && q1.peek()>q2.peek()){
             q2.add(q1.poll());
             q1.add(q2.poll());
         }
