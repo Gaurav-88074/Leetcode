@@ -25,10 +25,8 @@ class MedianFinder {
     }
     
     public double findMedian() {
-        if(q1.size()>q2.size()){
-            return (double)q1.peek();
-        }
-        else if(q1.size()<q2.size()){
+        
+        if(q1.size()<q2.size()){
             return (double)q2.peek();
         }
         else{
