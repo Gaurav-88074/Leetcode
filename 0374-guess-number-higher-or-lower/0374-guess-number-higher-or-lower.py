@@ -9,7 +9,7 @@ class Solution:
     def guessNumber(self, n: int) -> int:
         
         def compute(start,end):
-            mid = (start+end)//2
+            mid = start + (end-start)//2
             # print("-------------")
             # print(start,end)
             # print(mid)
