@@ -3,11 +3,10 @@
 # @return -1 if num is higher than the picked number
 #          1 if num is lower than the picked number
 #          otherwise return 0
-# def guess(num: int) -> int:
+# def guess(num):
 
-class Solution:
-    def guessNumber(self, n: int) -> int:
-        
+class Solution(object):
+    def guessNumber(self, n):
         def compute(start,end):
             mid = start + (end-start)//2
             # print("-------------")
@@ -24,3 +23,4 @@ class Solution:
                 # print("going right")
                 return compute(mid+1,end)
         return compute(1,n)  
+        
