@@ -79,7 +79,7 @@ class LRUCache:
             #-----------------------------
             # print(eliminate,self.d)
             del self.d[eliminate]            
-            print(f"${eliminate} was deleted")
+            # print(f"${eliminate} was deleted")
             newNode = node(key,value)
             self.d[key] = newNode
             self.append(newNode)
