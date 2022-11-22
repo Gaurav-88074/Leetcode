@@ -15,8 +15,8 @@ class Solution {
         int value;
         for(int i = 0 ; i<coins.length ; i++){
             value = minCoin(coins,amount-coins[i],dp);
-            if(amount-coins[i]>-1)
-                dp[amount-coins[i]] = value;
+            // if(amount-coins[i]>-1)
+            //     dp[amount-coins[i]] = value;
             if(value!=Integer.MAX_VALUE){
                 min = Math.min(min,1 + value);
             }
