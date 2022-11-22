@@ -1,5 +1,5 @@
 class Solution:
-    def calculate(self, s: str) -> int:
+    def calculate(self, s):
         # s = list(s)
         # print(s)
         def add(stack,v):
@@ -59,13 +59,6 @@ class Solution:
                     ac = ord(s[index])-48
                     value+=ac
                     index+=1
-                    # print("stucked at ",index)
-                # print("value obtained",value)
-                
-                
-                    # index+=1
-                    # print(stack)
-                    # continue
                 
                 if  len(stack)!=0 and stack[-1]=='+':
                     add(stack,value)
@@ -85,11 +78,7 @@ class Solution:
                 
                 value = stack.pop()
                 stack.pop()
-                # stack.append(value)
-                # print(stack)
-                
-                # print("=============")
-                # value = stack.pop()
+            
                 if  len(stack)!=0 and stack[-1]=='+':
                     add(stack,value)
                 elif len(stack)!=0 and stack[-1]=="-":
