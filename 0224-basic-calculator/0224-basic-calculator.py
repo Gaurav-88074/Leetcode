@@ -1,6 +1,6 @@
 class Solution:
     def calculate(self, s: str) -> int:
-        s = list(s)
+        # s = list(s)
         # print(s)
         def add(stack,v):
             stack.pop()
