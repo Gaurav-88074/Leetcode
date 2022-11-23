@@ -9,7 +9,7 @@ class Solution:
         
         c = Counter(d)
         
-        powers = [2**i for i in range(0,25)]
+        powers = [2**i for i in range(0,23)]
         st = set()
         res = 0
         
