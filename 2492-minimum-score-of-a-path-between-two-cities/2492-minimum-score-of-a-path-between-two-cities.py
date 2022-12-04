@@ -21,8 +21,8 @@ class Solution:
         dfs(1,res)
         v.add(1)
         # print(v)
-        for a,b,c in roads:
-            if a in v or b in v:
-                res[0] = min(res[0],c)
+        # for a,b,c in roads:
+        #     if a in v or b in v:
+        #         res[0] = min(res[0],c)
         return res[0]
             
