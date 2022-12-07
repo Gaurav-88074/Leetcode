@@ -46,7 +46,7 @@ class Solution {
         int right = rangeSumBST(root.right,low,high); 
         int v = 0;
         if(root.val<=high&&root.val>=low){
-            v = root.val;
+            v += root.val;
         }
         return left+right+v;
         //------------------
