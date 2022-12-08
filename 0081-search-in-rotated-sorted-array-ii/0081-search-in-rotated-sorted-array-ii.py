@@ -20,7 +20,7 @@ class Solution:
                 mid=(low+high)//2
                 if mid-1>=0 and nums[mid]<nums[mid-1]:
                     pivot[0]=mid
-                    print("mil gya")
+                    # print("mil gya")
                     return True
                 if(nums[mid]==target):
                     ans[0]=True
@@ -37,7 +37,7 @@ class Solution:
         
         pivotSearch = valueSearch(nums,target,0,len(nums)-1)
         
-        print(pivotSearch,pivot)
+        # print(pivotSearch,pivot)
         
         if ans[0]!=None:return ans[0]
         
