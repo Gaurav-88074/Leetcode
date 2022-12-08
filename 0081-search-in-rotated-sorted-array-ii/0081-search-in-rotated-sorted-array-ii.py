@@ -13,10 +13,7 @@ class Solution:
             else:
                 return binarySearch(nums,mid+1,high)
         def valueSearch(nums,target,low,high):
-            # global pivot
             while low<=high:
-                # if low==high:
-                #     return nums[low]==target
                 mid=(low+high)//2
                 if mid-1>=0 and nums[mid]<nums[mid-1]:
                     pivot[0]=mid
@@ -36,8 +33,6 @@ class Solution:
             return False
         
         pivotSearch = valueSearch(nums,target,0,len(nums)-1)
-        
-        # print(pivotSearch,pivot)
         
         if ans[0]!=None:return ans[0]
         
