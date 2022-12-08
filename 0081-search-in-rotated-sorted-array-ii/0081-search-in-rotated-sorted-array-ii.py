@@ -30,7 +30,9 @@ class Solution:
                 elif nums[mid]>nums[0]:
                     low=mid+1
                 else:
-                    return valueSearch(nums,target,low,mid-1) or valueSearch(nums,target,mid+1,high)
+                    left = valueSearch(nums,target,low,mid-1)   
+                    right = valueSearch(nums,target,mid+1,high)
+                    return left or right
             return False
         
         pivotSearch = valueSearch(nums,target,0,len(nums)-1)
