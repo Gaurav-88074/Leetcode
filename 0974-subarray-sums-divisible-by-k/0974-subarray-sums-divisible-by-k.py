@@ -7,6 +7,7 @@ class Solution:
         for i in nums:
             p+=i
             mod = p%k
+            print(mod,d[mod])
             res += d[mod]
             d[mod]+=1
         # print(d)
