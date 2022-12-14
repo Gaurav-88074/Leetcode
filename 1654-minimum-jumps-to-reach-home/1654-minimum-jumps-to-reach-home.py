@@ -21,10 +21,12 @@ class Solution:
             if dp[position][back]!=-1:
                 return dp[position][back]
             
-            dp[position][back] = 1 + compute(position + a,0)
+            right = 1 + compute(position + a,0)
+            dp[position][back] = right
             if not back:
-                dp[position][back] =  min(dp[position][back],1 + compute(position - b,back + 1))
-            return dp[position][back]
+                right =  min(right,1 + compute(position - b,back + 1))
+            dp[position][back] = right
+            return right
         # left = compute(0,0)
         # right= compute(0,0)
         # print(left,right)
