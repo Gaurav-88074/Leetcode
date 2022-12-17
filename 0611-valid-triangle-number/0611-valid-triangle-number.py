@@ -1,5 +1,5 @@
-class Solution(object):
-    def triangleNumber(self, nums):
+class Solution:
+    def triangleNumber(self, nums: List[int]) -> int:
         res = [0]
         def compute(nums,value,left,right,res):
             # print("-----------")
@@ -18,4 +18,5 @@ class Solution(object):
         for i in range(0,last):
             compute(nums,nums[i],i+1,len(nums)-1,res)
         return res[0]
-        
+                
+                
