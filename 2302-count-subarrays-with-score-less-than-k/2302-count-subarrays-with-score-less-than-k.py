@@ -5,7 +5,7 @@ class Solution:
         summ = 0
         for i,v in enumerate(nums):
             summ+=v
-            while (summ * (i-index+1)) >=k:
+            while (summ * (i-index+1)) >=k and index<=i:
                 summ-=nums[index]
                 index+=1
             n=(i-index+1)
