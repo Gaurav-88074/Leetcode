@@ -1,5 +1,5 @@
 class Solution {
-    public  void BFS(List<List<Integer>> graph,int[] visited,int start,int d) {
+    public  boolean BFS(List<List<Integer>> graph,int[] visited,int start,int d) {
         // int[] visited = new int[graph.size()];
         visited[start] = 1;
         Queue<Integer> queue = new LinkedList<>();
@@ -11,15 +11,18 @@ class Solution {
                 if (visited[j]==0) {
                     visited[j]=1;
                     if(visited[d]==1){
-                        return;
+                        return true;
                     }
                     queue.add(j);
                 }
             }
         }
+        return false;
         // System.out.println();
     }
     public boolean validPath(int n, int[][] edges, int source, int destination) {
+        if(source==destination)return true;
+        
         List<List<Integer>> graph = new ArrayList<>();
         for(int i =  0; i<n; i++){
             graph.add(new LinkedList<>());
@@ -33,8 +36,8 @@ class Solution {
         // System.out.println(graph);
         // System.out.println(source+"-"+destination);
         int[] visited = new int[n];
-        BFS(graph,visited,source,destination);
-        return visited[destination]==1;
+        
+        return BFS(graph,visited,source,destination);
         
     }
 }
