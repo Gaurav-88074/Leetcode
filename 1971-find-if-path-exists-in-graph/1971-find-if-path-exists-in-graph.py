@@ -4,6 +4,7 @@ class Solution:
         for a,b in edges:
             graph[a].append(b)
             graph[b].append(a)
+
         def dfs(node,v):
             if node in v:
                 return False
@@ -14,6 +15,8 @@ class Solution:
             res = False
             for nxt in graph[node]:
                 res = res or dfs(nxt,v)
+                if res:
+                    return res
             return res
         v=set()
         return dfs(source,v)
