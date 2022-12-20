@@ -1,7 +1,7 @@
 class Solution {
     public int maxTurbulenceSize(int[] arr) {
         // if(arr.length==1)return 1;
-        
+    
         int res = 0;
         int c = 0;
         int previous = 10;
