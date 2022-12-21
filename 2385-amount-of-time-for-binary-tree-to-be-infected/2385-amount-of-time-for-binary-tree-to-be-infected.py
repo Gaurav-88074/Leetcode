@@ -1,11 +1,11 @@
 # Definition for a binary tree node.
-# class TreeNode:
+# class TreeNode(object):
 #     def __init__(self, val=0, left=None, right=None):
 #         self.val = val
 #         self.left = left
 #         self.right = right
-class Solution:
-    def amountOfTime(self, root: Optional[TreeNode], start: int) -> int:
+class Solution(object):
+    def amountOfTime(self, root, start):
         # obj = TreeNode(0)
         self.parent = defaultdict(TreeNode)
         self.snode = None
@@ -39,7 +39,7 @@ class Solution:
         snode = self.snode
         # print(self.snode.val)
         self.v = set()
-        
+        #------------------------------------------------------
         k = 1
         while snode.val!=0:
             if snode.left!=None and snode.left.val not in self.v:
@@ -51,3 +51,5 @@ class Solution:
             k+=1
             snode = self.parent[snode.val]
         return self.res
+        #---------------------------------------------------------
+        
