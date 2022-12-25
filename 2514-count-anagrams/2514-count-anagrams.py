@@ -12,5 +12,6 @@ class Solution:
                 if c[i]!=1:
                     down*= math.factorial(c[i])
             res*= (up//down)
+            res%=mod
             # print(up,down)
         return res%mod
