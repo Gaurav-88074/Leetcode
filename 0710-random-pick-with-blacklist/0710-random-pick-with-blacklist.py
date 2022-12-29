@@ -42,7 +42,3 @@ class Solution:
         self.i%=self.size
         return random.randrange(a,b)
             
-
-# Your Solution object will be instantiated and called as such:
-# obj = Solution(n, blacklist)
-# param_1 = obj.pick()
