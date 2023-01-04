@@ -38,17 +38,10 @@ class Solution:
         
         singlen,resn  = self.compute(numsn)
         singlep,resp  = self.compute(numsp)
-        # print(single) 
-        res = resp+resn 
+
+        res    = resp + resn 
         single = singlen + singlep 
         
-        if res + (zero//2)==shouldBe:return True
-#         if zero<single:return False
-        
-#         if zero>single and (zero-single)%2==0:return True
-        
-#         return zero==single
-        
-        # return shouldBe == zero + res
-        
+        return res + (zero//2)==shouldBe
+#  
         
