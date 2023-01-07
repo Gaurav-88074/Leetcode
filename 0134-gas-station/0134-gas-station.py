@@ -1,5 +1,5 @@
-class Solution:
-    def canCompleteCircuit(self, gas: List[int], cost: List[int]) -> int:
+class Solution(object):
+    def canCompleteCircuit(self, gas, cost):
         start = 0
         fuel = 0
         # costamount =0
@@ -48,3 +48,4 @@ class Solution:
             if stationCovered>=len(gas) : 
                 return start 
         return -1
+        
