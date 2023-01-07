@@ -6,7 +6,6 @@ class Solution:
         stationCovered = 0
         currentPosition =0
         
-        problem = 0
         visited = 0
         while visited<2*len(gas)-1: 
             visited+=1
@@ -21,8 +20,6 @@ class Solution:
                 # print("problem occured at",currentPosition,"fuel=",fuel,\
                 # "cost=",cost[currentPosition],"s=",start)
                  
-                problem +=1
-                 
                 fuel-=abs(gas[start] - cost[start]) 
                 
                 # print("fuel at",currentPosition,fuel)
@@ -35,7 +32,6 @@ class Solution:
                 # print("new problem occured at",currentPosition,"fuel=",fuel,\
                 # "cost=",cost[currentPosition],"s=",start)
                 fuel = 0 
-                problem+=1
                 stationCovered = 0 
                 start+=1
             else: 
