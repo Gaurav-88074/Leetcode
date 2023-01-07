@@ -41,6 +41,6 @@ class Solution:
             currentPosition+=1
             currentPosition%=len(gas)
             #---------------------------------------
-            if stationCovered>=len(gas) : 
+            if stationCovered==len(gas) : 
                 return start 
         return -1
