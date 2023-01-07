@@ -2,7 +2,6 @@ class Solution:
     def canCompleteCircuit(self, gas: List[int], cost: List[int]) -> int:
         start = 0
         fuel = 0
-        # costamount =0
         stationCovered = 0
         currentPosition =0
         
@@ -21,7 +20,6 @@ class Solution:
                 # "cost=",cost[currentPosition],"s=",start)
                  
                 fuel-=abs(gas[start] - cost[start]) 
-                
                 # print("fuel at",currentPosition,fuel)
                 
                 start+=1 
