@@ -3,7 +3,7 @@ class Solution:
         if len(points)<=2: return len(points)
         d  = defaultdict(list)
         def slope(c,d):
-            if (d[0]-c[0])==0:return 69696969
+            if (d[0]-c[0])==0:return 69
             slop = (d[1]-c[1])/(d[0]-c[0])
             return slop
         r=0
