@@ -6,7 +6,7 @@ class Solution:
             if (d[0]-c[0])==0:return float('inf')
             slop = (d[1]-c[1])/(d[0]-c[0])
             return slop
-        r=2
+        r=0
         for i in points:
             d  = defaultdict(list)
             for j in points:
