@@ -15,7 +15,7 @@ class Solution:
                     l.add(1 + value)
             # print(tree[node],l)
             if len(l)>=2:
-                res[0] = max(l[-1]+l[-2],res[0])
+                res[0] = max(l[-1] + l[-2] ,res[0])
             res[0]=max(c,res[0])
             return c
         
