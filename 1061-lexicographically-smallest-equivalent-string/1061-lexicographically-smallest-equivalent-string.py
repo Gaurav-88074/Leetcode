@@ -12,6 +12,9 @@ class Solution:
         def dfs(graph,node,visited,MV):
             visited.add(node)
             MV[0] = min(MV[0],node)
+            
+            if node=='a':return
+            
             for i in graph[node]:
                 if i not in visited:
                     dfs(graph,i,visited,MV)
