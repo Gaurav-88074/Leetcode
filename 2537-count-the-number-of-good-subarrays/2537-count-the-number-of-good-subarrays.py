@@ -15,8 +15,9 @@ class Solution:
                 # res+=1
                 key = nums[pre]
                 value = d[key]
-                if value>=2:
-                    pair -= (value-1)
+                # if value>=2:
+                pair -= (value-1)
+                
                 value-=1
                 if value==0:
                     del d[key]
