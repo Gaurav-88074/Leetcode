@@ -6,9 +6,9 @@ class Solution:
         pre = 0
         for i,v in enumerate(nums):
             d[v]+=1
-            if d[v]>=2:
-                n =d[v]
-                pair+= n-1
+            # if d[v]>=2:
+            n =d[v]
+            pair+= n-1
             # print(pair,"[",i,",",v,"]")
 
             while pair>=k and pre<i:
