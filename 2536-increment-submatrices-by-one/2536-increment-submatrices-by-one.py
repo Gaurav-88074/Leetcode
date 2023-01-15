@@ -12,6 +12,7 @@ class Solution:
                 mat[i][y1]+=1
                 if y2+1<n:
                     mat[i][y2+1]-=1
+                    
         for i in range(n):
             v=0
             for j in range(n):
