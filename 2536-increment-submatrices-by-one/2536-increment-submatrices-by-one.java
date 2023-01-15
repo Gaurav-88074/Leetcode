@@ -1,14 +1,24 @@
 class Solution {
     public int[][] rangeAddQueries(int n, int[][] queries) {
         int[][] mat = new int[n][n];
+        //brute force
         for (int[] query : queries) {
-            int row1 = query[0], col1 = query[1], row2 = query[2], col2 = query[3];
-            for (int i = row1; i <= row2; i++) {
-                for (int j = col1; j <= col2; j++) {
-                    mat[i][j]++;
-                }
+            int x1 = query[0], y1 = query[1], x2 = query[2], y2 = query[3];
+            for (int i = x1; i <= x2; i++) {
+                mat[i][y1]+=1;
+                
+                if (y2+1<n) mat[i][y2+1]-=1;
+            }   
+        }
+        for(int i = 0; i < n; i++){
+            int v=0;
+            for(int j = 0; j < n; j++){
+                
+                v+=mat[i][j];
+                mat[i][j]=v;
             }
         }
+            
         return mat;
     }
 }
