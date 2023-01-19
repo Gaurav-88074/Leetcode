@@ -15,6 +15,7 @@ class Solution:
                 obj[1]-=1
                 count+=1
             #-------------------------------------
+            #IMP STEP
             if obj[1]>0 and len(l)==0: return "".join(res)
             #---------------------------------
             if obj[1]>0 and len(l)!=0:
