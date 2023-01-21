@@ -13,10 +13,10 @@ class Solution:
                 res.append(v)
                 # print(v)
                 return
+            #-----------------------------
             c = int(s[index])
-            # if c==0 and value
             upnext = value * 10 + c 
-            # arr.append(c)
+            #-----------------------------
             if upnext>255 and dot<3:
                 arr.append(".")
                 arr.append(c)
