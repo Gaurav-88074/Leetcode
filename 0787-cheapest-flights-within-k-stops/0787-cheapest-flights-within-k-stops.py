@@ -10,7 +10,6 @@ class Solution:
         @lru_cache(None)
         def compute(node,count):
             if node==dst and count<=k:
-                # print("reached",count)
                 return 0
             if count>k :#or node in visited:
                 return float('inf')
@@ -24,6 +23,4 @@ class Solution:
             return ans
         #----------------------------------
         res = compute(src,0)
-        if res==float('inf'):
-            return -1
-        return res
+        return -1 if res==float('inf') else res
