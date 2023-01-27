@@ -2,7 +2,7 @@ class Solution:
     def findAllConcatenatedWordsInADict(self, words: List[str]) -> List[str]:
         s = set(words)
         
-        @lru_cache(None)
+        # @lru_cache(None)
         def is_possible(word,index,char,count):
             if index==len(word):
                 if char in s and count>0:
