@@ -1,5 +1,5 @@
-class Solution(object):
-    def findAllConcatenatedWordsInADict(self, words):
+class Solution:
+    def findAllConcatenatedWordsInADict(self, words: List[str]) -> List[str]:
         s = set(words)
         
         # @lru_cache(None)
@@ -18,4 +18,3 @@ class Solution(object):
             if is_possible(i,0,"",0):
                 res.append(i)
         return res
-        
