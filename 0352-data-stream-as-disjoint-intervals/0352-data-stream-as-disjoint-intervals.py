@@ -3,7 +3,6 @@ class SummaryRanges:
 
     def __init__(self):
         self.l = SortedList(key = lambda x : x[0] )
-        # self.l = SortedSet()
         self.st = set()
     def addNum(self, val: int) -> None:
         if val in self.st:
