@@ -17,8 +17,7 @@ class Solution:
             
             if prevIndex==-1:
                 take = arr[index][0] + compute(index+1,index)
-            # elif arr[index][1] == arr[prevIndex][1]:
-            #     take = arr[index][0] + compute(index+1,index)
+            
             elif arr[index][0] >= arr[prevIndex][0]:#and arr[index][0] >=arr[prevIndex][0]:
                 take = arr[index][0] + compute(index+1,index)
                 
