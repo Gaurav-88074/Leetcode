@@ -1,12 +1,15 @@
-class Solution:
-    def gcdOfStrings(self, str1: str, str2: str) -> str:
-        def HCF(a,b):
-            if b==0:return a
-            return HCF(b,a%b)
+class Solution(object):
+    def gcdOfStrings(self, str1, str2):
         
-        if str1+str2!=str2+str1:
-            return ""
+        for i in range(len(str2)):
+            sub = str2[ : len(str2) - i]
+            
+            a = str1.count(sub)
+            b = str2.count(sub)
+            
+            if a * len(sub)!=len(str1) or b * len(sub)!=len(str2):
+                continue
+            return sub
+            
+        return ""
         
-        hcf = HCF(len(str1),len(str2))
-        
-        return str2[:hcf]
