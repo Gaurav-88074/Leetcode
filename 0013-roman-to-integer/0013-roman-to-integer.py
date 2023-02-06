@@ -16,16 +16,14 @@ class Solution:
             'CM': 900
         }
         res = 0
-        pre = s[0]
-        for i in range(1,len(s)):
+        pre = ""
+        for i in range(0,len(s)):
             c  = s[i]
             if pre!="" and pre + c in d:
                 res+=d[pre+c]
-                # print(pre+c)
                 pre=""
             elif pre!="":
                 res+=d[pre]
-                # print(pre)
                 pre=c
             else:
                 pre = c
