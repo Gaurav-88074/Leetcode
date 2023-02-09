@@ -8,6 +8,6 @@ class Solution:
         for a, seta in count.items():
             for b, setb in count.items():
                 if a == b: continue
-                same = len(seta & setb)
+                same = len(seta.intersection(setb))
                 res += (len(seta) - same) * (len(setb) - same)
         return res 
