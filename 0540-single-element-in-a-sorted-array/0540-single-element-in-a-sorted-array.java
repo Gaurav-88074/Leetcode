@@ -29,7 +29,6 @@ class Solution {
                 }
             }
         }
-        // System.out.println(low+" "+high);
         return nums[high];
     }
 }
