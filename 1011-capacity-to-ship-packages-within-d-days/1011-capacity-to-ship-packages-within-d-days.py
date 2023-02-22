@@ -13,12 +13,11 @@ class Solution:
                 else:
                     capacity += weight
             return days
-
+        
         while l < r:
             m = (l + r) // 2
             if shipDays(m) <= days:
                 r = m
             else:
                 l = m + 1
-
         return l
