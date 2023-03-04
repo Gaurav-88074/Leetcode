@@ -4,8 +4,8 @@ class Solution:
         jump = k<<1
         res = [*s]
         for i in range(0,len(s),jump):
-            segment = s[i : i+k]
-            # print(segment,i)
-            res[i : i+k] = segment[::-1]
-            # print(res)
-        return "".join(res)
+            # segment = s[i : i+k]
+            # res[i : i+k] = segment[::-1]
+            
+            s[i : i+k] = s[i : i+k][::-1]
+        return "".join(s)
