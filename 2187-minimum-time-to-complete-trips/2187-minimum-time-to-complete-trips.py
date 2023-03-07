@@ -9,7 +9,7 @@ class Solution:
         
         low = min(time)
         high= 10**18
-        res = 10**7
+        # res = 10**7
         while low<high:
             mid = (low+high)//2
             
