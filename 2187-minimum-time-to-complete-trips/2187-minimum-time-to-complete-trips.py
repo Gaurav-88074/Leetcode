@@ -8,7 +8,7 @@ class Solution:
             return res
         
         low = min(time)
-        high= max(time)*totalTrips
+        high= 10**18
         res = 10**7
         while low<high:
             mid = (low+high)//2
