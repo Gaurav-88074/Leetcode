@@ -12,13 +12,10 @@ class Solution:
                     math.ceil((i)/div) for i in nums
                 ]
             )
-            # print(div,s)
             
             if s>threshold:
-                # print("going right")
                 left=div+1
             else:
-                # print("going left")
                 res = min(res,div)
                 right=div-1
         return res
