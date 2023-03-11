@@ -31,11 +31,11 @@ class Solution {
         if(head.next==null){
             return new TreeNode(head.val);
         }
-        ListNode start = head;
-        ListNode mid   = head;
-        ListNode midPre =mid;
+        ListNode start  = head;
+        ListNode mid    = head;
+        ListNode midPre = mid;
         //-----------------------------------
-        while(start!=null && start.next!=null && mid.next!=null){
+        while(start!=null && start.next!=null ){
             start = start.next.next;
             midPre = mid;
             mid   = mid.next;
