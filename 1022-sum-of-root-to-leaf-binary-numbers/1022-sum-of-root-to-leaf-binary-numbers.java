@@ -27,7 +27,7 @@ class Solution {
             res = res + value;
         }
         //---------------------------
-        compute(root.left,value);
+        compute(root.left ,value);
         compute(root.right,value);
         //---------------------------
     }
