@@ -53,7 +53,7 @@ class Solution {
         boolean check = compute(root,1 , 0,null);
         // System.out.println(pLeft);
         int nodes = 1;
-        System.out.println(check);
+        // System.out.println(check);
         for(int i=1 ; i<maxLevel;i++){
             if(count[i]!=nodes){
                 return false;
