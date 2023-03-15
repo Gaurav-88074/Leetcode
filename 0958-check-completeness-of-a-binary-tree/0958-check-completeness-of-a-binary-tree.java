@@ -51,6 +51,7 @@ class Solution {
     public boolean isCompleteTree(TreeNode root) {
         
         boolean check = compute(root,1 , 0,null);
+        if(check==false)return check;
         // System.out.println(pLeft);
         int nodes = 1;
         // System.out.println(check);
