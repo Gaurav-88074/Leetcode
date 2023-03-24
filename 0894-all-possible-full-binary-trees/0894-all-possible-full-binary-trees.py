@@ -11,10 +11,8 @@ class Solution:
         def compute(n):
             if n<=0:
                 return []
-            
             if n==1:
                 return [TreeNode(0)]
-            
             res = []
             #----------
             # n-=1
@@ -51,6 +49,6 @@ class Solution:
                         root = TreeNode(0,a,b)
                         res.append(root)
             return res
-                #------------------------------------
+            #------------------------------------
         res = compute(x)
         return res
