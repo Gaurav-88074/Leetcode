@@ -14,7 +14,20 @@ class Solution:
             if n==1:
                 return [TreeNode(0)]
             res = []
-            #----------
+            
+            #-----------------------------------
+            for i in range(2, n + 1, 2):
+                left = compute(i-1)
+                right= compute(n-i)
+                for a in left :
+                    for b in right:
+                        root = TreeNode(0,a,b)
+                        res.append(root)
+            return res
+            #------------------------------------
+        return compute(x)
+#----------
+#----------
             # n-=1
             #---------
             #-----------------------------
@@ -40,15 +53,3 @@ class Solution:
 #                 for b in right:
 #                     root = TreeNode(0,a,b)
 #                     res.append(root)
-            #-----------------------------------
-            for i in range(2, n + 1, 2):
-                left = compute(i-1)
-                right= compute(n-i)
-                for a in left :
-                    for b in right:
-                        root = TreeNode(0,a,b)
-                        res.append(root)
-            return res
-            #------------------------------------
-        res = compute(x)
-        return res
