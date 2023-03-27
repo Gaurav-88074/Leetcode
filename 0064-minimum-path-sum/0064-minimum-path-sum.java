@@ -1,10 +1,10 @@
 class Solution {
-    public int compute(int[][] grid,int x,int y,int[][] dp){
+    public int compute(int[][] grid,int x,int y,Integer[][] dp){
         // if( (x>=grid.length && y!=grid[0].length) || 
         //     (x!=grid.length && y>=grid[0].length)){
         //     return 1;
         // }
-        if(dp[x][y]!=-1){
+        if(dp[x][y]!=null){
             return dp[x][y];
         }
         if(x>=grid.length || y>=grid[0].length){
@@ -22,10 +22,10 @@ class Solution {
         
     }
     public int minPathSum(int[][] grid) {
-        int[][] dp = new int[201][201];
+        Integer[][] dp = new Integer[201][201];
         // Arrays.fill(dp,-1);
-        for (int[] row: dp)
-        Arrays.fill(row, -1);
+        // for (int[] row: dp)
+        // Arrays.fill(row, -1);
         return compute(grid,0,0,dp);
     }
 }
