@@ -8,9 +8,9 @@ class Solution:
                 return 0
             if passDeadline < days[i]:
                 return  min([
-                    costs[0] + compute(i+1, 1 +  days[i]-1),
-                    costs[1] + compute(i+1, 7 +  days[i]-1),
-                    costs[2] + compute(i+1, 30+  days[i]-1)
+                    costs[0] + compute(i+1, 0 +  days[i]),
+                    costs[1] + compute(i+1, 6 +  days[i]),
+                    costs[2] + compute(i+1, 29+  days[i])
                 ])
             return compute(i+1 , passDeadline)
         return compute(0,-1)
