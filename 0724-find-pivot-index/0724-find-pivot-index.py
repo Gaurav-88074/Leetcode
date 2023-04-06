@@ -5,8 +5,8 @@ class Solution:
         l = list(accumulate(nums))
         r = list(accumulate(nums[::-1]))
         r = r[::-1]
-        print(l)
-        print(r)
+        # print(l)
+        # print(r)
         # if r[1]==0:
         #     return 0
         # if l[-2]==0:
