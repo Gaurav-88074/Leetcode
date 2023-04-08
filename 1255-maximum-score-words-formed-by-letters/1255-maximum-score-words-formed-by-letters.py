@@ -24,6 +24,7 @@ class Solution:
         def credit(word):
             for i in word:
                 d[i]+=1
+        
         def compute(i):
             if i==len(words):
                 return 0
