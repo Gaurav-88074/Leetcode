@@ -27,7 +27,7 @@ class Solution:
             res%=mod
             return res
         
-        # return 
+        #-----------------------------------
         gen(3,0,[])#use brain like Gaurav
         # print(pair)
         return compute(n,0,0,0)%mod
