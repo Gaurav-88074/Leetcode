@@ -14,5 +14,5 @@ class Solution:
 
         mn = min(nums)
         for i in nums:
-            res+=(i-mn)
+            res+=abs(i-mn)
         return res
