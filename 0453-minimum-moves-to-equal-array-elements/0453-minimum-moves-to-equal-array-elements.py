@@ -2,7 +2,7 @@ from sortedcontainers import SortedList
 class Solution:
     def minMoves(self, nums: List[int]) -> int:
         res = 0
-        l  = SortedList(nums,key = lambda x : -x)
+        # l  = SortedList(nums,key = lambda x : -x)
         
         # while l[0]!=l[-1]:
         #     mn = l[-1]
@@ -13,6 +13,6 @@ class Solution:
         # return res
 
         mn = min(nums)
-        for i in l:
+        for i in nums:
             res+=(i-mn)
         return res
