@@ -19,7 +19,8 @@ class Solution:
                     arr.append(index)
             return head
         compute(head,0,None)
-        arr.sort()
+        # arr.sort()
+        arr.reverse()
         # print(arr)
         if len(arr)<2:
             return [-1,-1]
