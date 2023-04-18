@@ -5,7 +5,7 @@ class Solution:
         for i in s:
             if i=='R':
                 v+=1
-            if i=='L':
+            elif i=='L':
                 v-=1
             if v==0:
                 res+=1
