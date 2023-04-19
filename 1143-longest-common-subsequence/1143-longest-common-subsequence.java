@@ -1,9 +1,9 @@
 class Solution {
-    public int LCS(int m,int n,String word1,String word2,int[][] dp){
+    public int LCS(int m,int n,String word1,String word2,Integer[][] dp){
         if(m==-1 ||n==-1){
             return 0;
         }
-        if(dp[m][n]!=-1){
+        if(dp[m][n]!=null){
             return dp[m][n];
         }
         if(word1.charAt(m) == word2.charAt(n)){
@@ -36,10 +36,10 @@ class Solution {
         int n = word2.length();
         
         
-        int[][] dp = new int[m][n];
-        for(int[] arr : dp){
-            Arrays.fill(arr,-1);
-        }
+        Integer[][] dp = new Integer[m][n];
+        // for(int[] arr : dp){
+            // Arrays.fill(arr,-1);
+        // }
         int lcs = LCS(m-1,n-1,word1,word2,dp);
         return lcs;
     }
