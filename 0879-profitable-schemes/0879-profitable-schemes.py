@@ -4,7 +4,7 @@ class Solution:
         # dp = [[[None]*101 for i in range(101)] for j in range(101)]
         @lru_cache(None)
         def compute(i,p,g):
-            key = (i,p,g)
+            # key = (i,p,g)
             if g>n:
                 return 0
             if i==len(profit):
