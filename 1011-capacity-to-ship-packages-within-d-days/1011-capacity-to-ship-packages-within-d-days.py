@@ -12,7 +12,7 @@ class Solution:
                     w+=i
             return 1 + day
         low = max(weights)
-        high=sum(weights)
+        high= sum(weights)
         # print(compute(15))
         while low<high:
             mid = (low+high)//2
