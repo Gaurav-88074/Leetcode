@@ -1,16 +1,29 @@
-from sortedcontainers import SortedSet
-class SmallestInfiniteSet:
+class SmallestInfiniteSet(object):
 
     def __init__(self):
-        self.st = SortedSet([i for i in range(1,1001)])
+        self.popped = set()
+        self.m = 1
+        self.n = set()
+        self.all = True
 
-    def popSmallest(self) -> int:
-        return self.st.pop(0)
+    def popSmallest(self):
+        if len(self.n)==0:
+            v = self.m
+            self.m+=1
+            self.popped.add(v)
+            return v
+        else:
+            v = min(self.n)
+            self.popped.add(v)
+            self.n.discard(v)
+            return v
             
         
 
-    def addBack(self, num: int) -> None:
-        self.st.add(num)
+    def addBack(self, num) :
+        if num in self.popped:
+            self.n.add(num)
+            self.popped.discard(num)
         
 
 
