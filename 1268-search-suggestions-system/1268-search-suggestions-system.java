@@ -104,6 +104,7 @@ class Trie {
 class Solution {
     public List<List<String>> suggestedProducts(String[] products, String searchWord) {
         Trie trie= new Trie();
+        // Arrays.sort(products);
         for(String s : products){
             trie.insert(s);
         }
