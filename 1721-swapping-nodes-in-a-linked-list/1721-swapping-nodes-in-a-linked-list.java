@@ -13,12 +13,7 @@ class Solution {
     private int maxSize;
     public void compute(ListNode head,int size,int k){
         if(head==null){
-            // if((size&1)==1){
-            //     maxSize = size-1;
-            // }
-            // else{
-                maxSize = size;
-            // }
+            maxSize = size;
             return;
         }
         if(size==k){
@@ -33,7 +28,11 @@ class Solution {
         //-------------------------------
         
     }
+//     public ListNode fast(ListNode head, int k){
+        
+    // }
     public ListNode swapNodes(ListNode head, int k) {
+        //it worked
         compute(head,1,k);
         return head;
     }
