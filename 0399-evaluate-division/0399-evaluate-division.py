@@ -18,11 +18,12 @@ class Solution:
             if node==dest and node in graph:
                 return 1
             v.add(node)
-            res = []
+            res = float('inf')
             for nxt in graph[node]:
-                res.append(d[(node,nxt)] * compute(nxt,dest,prev,v))   
-            if res:return min(res)
-            return float('inf')
+                cv =d[(node,nxt)] * compute(nxt,dest,prev,v)
+                res=min(cv,res)
+            # if res:return min(res)
+            return res
         for a,b in queries:
             val = compute(a,b,None,set())
             if val==float('inf'):
