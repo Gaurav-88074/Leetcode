@@ -2,7 +2,6 @@ from sortedcontainers import SortedList, SortedDict,SortedSet
 class Solution:
     def maxScore(self, nums1: List[int], nums2: List[int], k: int) -> int:
         
-        # if nums1==[2,1,14,12] and nums2 == [11,7,13,6] :return 168
         arr = []
         for i in range(len(nums1)):
             arr.append([
