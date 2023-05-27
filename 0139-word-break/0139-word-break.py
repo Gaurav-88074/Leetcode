@@ -12,6 +12,8 @@ class Solution:
             for i in range(x, len(s)):
                 if s[x:i+1] in d:
                     take = take or compute(i + 1)
+                if take:
+                    return True
                     # skip = min(skip, take)
 
             return take
