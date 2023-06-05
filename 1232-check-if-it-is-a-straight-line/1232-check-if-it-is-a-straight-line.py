@@ -4,13 +4,8 @@ class Solution:
         b = coordinates[1]
         def computeSlope(node):
             return (b[1]-a[1])*(node[0]-b[0]) == (node[1]-b[1])*(b[0]-a[0])
-        # slope = computeSlope(a,b)
-        # print(slope)
+        #use brain
         for i in range(1,len(coordinates)):
-            # node = coordinates[i]
-            v=computeSlope(coordinates[i])
-            if v==False:
-                return v
-            # if slope!=v:
-                # return False
+            if not computeSlope(coordinates[i]):
+                return False
         return True
