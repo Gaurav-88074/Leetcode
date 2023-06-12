@@ -8,5 +8,5 @@ class Solution:
         mx = max(nums)
         nums.remove(mn)
         nums.remove(mx)
-        return random.choice(nums)
+        return nums[0]
         
