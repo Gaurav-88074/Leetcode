@@ -4,8 +4,12 @@ class Solution:
             return -1
         # nums.sort()
         # return nums[1]
-        mn = min(nums)
-        mx = max(nums)
+        
+        mn = float('inf')
+        mx = float('-inf')
+        for i in nums:
+            mn = min(mn,i)
+            mx = max(mx,i)
         nums.remove(mn)
         nums.remove(mx)
         return nums[0]
