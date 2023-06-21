@@ -14,8 +14,7 @@ class Solution:
                     cost[i]
                 ]
             )
-        # arr.sort(key = lambda x : x[0])
-        # print(arr)
+        #op question
         low = min(nums)
         high= max(nums)
         res = 0
