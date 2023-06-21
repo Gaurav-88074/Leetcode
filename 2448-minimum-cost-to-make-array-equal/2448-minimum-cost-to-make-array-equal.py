@@ -25,6 +25,7 @@ class Solution:
             
             c1 = compute(arr,mid1)
             c2 = compute(arr,mid2)
+            
             if  c1<c2:
                 res = c1
                 high= mid1
