@@ -2,7 +2,7 @@ class Solution:
     def removeOuterParentheses(self, s: str) -> str:
         res = []
         b = 0
-        d = defaultdict(int)
+        # d = defaultdict(int)
         preScene = 0
         for i,v in enumerate(s):
             if v=="(":
