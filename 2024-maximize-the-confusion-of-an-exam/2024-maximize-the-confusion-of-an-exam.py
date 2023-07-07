@@ -4,7 +4,7 @@ class Solution:
         false=0
         index = 0
         res = 0
-        # mn=0
+        
         for i,v in enumerate(answerKey):
             if v=="T":
                 true+=1
@@ -12,7 +12,6 @@ class Solution:
                 false+=1
             mn = min(true,false)
             while mn>k :
-                # print(mn,"min=")
                 ch = answerKey[index]
                 index+=1
                 if ch=="T":
