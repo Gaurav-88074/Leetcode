@@ -1,14 +1,6 @@
 class Solution:
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
         graph = defaultdict(list)
-        # 10 [0]
-        # 18 [3]
-        # 5  [5]
-        # 11 [6]
-        # 14 [11]
-        # 1  [13]
-        # 1  [15]
-        # 4  [17]
         #--------------------------
         for a,b in prerequisites:
             graph[b].append(a)
