@@ -13,7 +13,7 @@ class Solution:
                 return 0
             
             # print("I took",i**x)
-            take = compute(n - pow(i,x,mod) , i+1)%mod
+            take = compute(n - pow(i,x) , i+1)%mod
             skip = compute(n,i+1)%mod
             res = (take+skip)%mod
             return res
