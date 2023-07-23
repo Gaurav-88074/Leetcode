@@ -14,9 +14,10 @@ class Solution:
             if n<0 or n-powermap[i]<0:
                 return 0
             
-            # print("I took",i**x)
             take = compute(n - powermap[i] , i+1)%mod
             skip = compute(n,i+1)%mod
+            
             res = (take+skip)%mod
+            
             return res
         return compute(n,1)%mod
