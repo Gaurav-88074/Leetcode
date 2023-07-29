@@ -23,11 +23,11 @@ class Solution:
             inOrder(root.left )
             inOrder(root.right)
             #------------------
-            if root.val < self.firstMin:
-                self.firstMin = root.val
-            #------------------
-            if root.val > self.firstMin and root.val<self.secondMin:
-                self.secondMin = root.val
+            # if root.val < self.firstMin:
+            #     self.firstMin = root.val
+            # #------------------
+            # if root.val > self.firstMin and root.val<self.secondMin:
+            #     self.secondMin = root.val
             #-----------------
         inOrder(root)
         # print(self.firstMin)
