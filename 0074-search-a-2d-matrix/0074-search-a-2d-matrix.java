@@ -1,12 +1,8 @@
 class Solution {
     public int[] compute(int n,int column){
         int y = n%column;
-        int x = 0;
-        // int v = 0;
-        while (n>=column){
-            n-=column;
-            x+=1;
-        }
+        int x = n/column;
+
         return new int[]{x,y};
     }
     public boolean searchMatrix(int[][] mat, int key) {
