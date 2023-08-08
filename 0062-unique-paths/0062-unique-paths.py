@@ -1,5 +1,5 @@
-class Solution:
-    def uniquePaths(self, m: int, n: int) -> int:
+class Solution(object):
+    def uniquePaths(self, m, n):
         dp = [[0 for i in range(n)] for j in range(m)]
         dp[m-1][n-1] = 1
         mod  = 10**9 + 7
@@ -16,3 +16,4 @@ class Solution:
                 val = (right+down)
                 dp[x][y]=max(dp[x][y],val)
         return dp[0][0]
+        
