@@ -22,8 +22,24 @@ class Solution:
                 return True
             
             return False
+        def iterative():
+            n = len(nums)
+            dp = [False] * (n+1)
+            dp[-1]=True
+            for i in range(n-1,-1,-1):
+                res = False
+                if op1(nums,i) and dp[i+2]:
+                    res|=True
+                if op2(nums,i) and dp[i+3]:
+                    res|=True
+                if op3(nums,i) and dp[i+3]:
+                    res|=True
+                dp[i] = res
+            # print(dp)
+            return dp[0]
         
         # print(right)
-        res =check(0)
+        # res =check(0)
+        res =iterative() 
         check.cache_clear()
         return res
