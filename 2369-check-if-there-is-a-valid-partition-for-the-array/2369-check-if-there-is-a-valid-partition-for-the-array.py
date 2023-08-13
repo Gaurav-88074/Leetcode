@@ -24,4 +24,6 @@ class Solution:
             return False
         
         # print(right)
-        return check(0)
+        res =check(0)
+        check.cache_clear()
+        return res
