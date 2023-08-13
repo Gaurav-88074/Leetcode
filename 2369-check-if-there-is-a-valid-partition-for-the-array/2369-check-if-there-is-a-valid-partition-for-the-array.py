@@ -1,4 +1,5 @@
 class Solution:
+    #OP question
     def validPartition(self, nums: List[int]) -> bool:
         def op1(nums,index):
             if index+1>=len(nums) : return False
@@ -30,16 +31,16 @@ class Solution:
                 res = False
                 if op1(nums,i) and dp[i+2]:
                     res|=True
-                if op2(nums,i) and dp[i+3]:
+                elif op2(nums,i) and dp[i+3]:
                     res|=True
-                if op3(nums,i) and dp[i+3]:
+                elif op3(nums,i) and dp[i+3]:
                     res|=True
                 dp[i] = res
             # print(dp)
             return dp[0]
         
         # print(right)
-        res =check(0)
-        # res =iterative() 
+        # res =check(0)
+        res =iterative() 
         check.cache_clear()
         return res
