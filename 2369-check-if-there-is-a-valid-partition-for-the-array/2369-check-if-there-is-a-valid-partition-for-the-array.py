@@ -39,7 +39,7 @@ class Solution:
             return dp[0]
         
         # print(right)
-        # res =check(0)
-        res =iterative() 
-        # check.cache_clear()
+        res =check(0)
+        # res =iterative() 
+        check.cache_clear()
         return res
