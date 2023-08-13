@@ -41,5 +41,5 @@ class Solution:
         # print(right)
         # res =check(0)
         res =iterative() 
-        check.cache_clear()
+        # check.cache_clear()
         return res
