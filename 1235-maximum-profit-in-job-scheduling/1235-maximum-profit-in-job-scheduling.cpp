@@ -44,7 +44,12 @@ public:
             }
             total[i] = max(p,total[i-1]);
         }
-        return total[jobs.size()-1];
+        int res = total[0];
+        for(auto e : total){
+            res =max(e,res);
+        }
+        return res;
+        // return total[jobs.size()-1];
     }
 
     int jobScheduling(vector<int>& startTime, vector<int>& endTime, vector<int>& profit) {
