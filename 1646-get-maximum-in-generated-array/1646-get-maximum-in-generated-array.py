@@ -1,5 +1,5 @@
-class Solution(object):
-    def getMaximumGenerated(self, n):
+class Solution:
+    def getMaximumGenerated(self, n: int) -> int:
         dp = [-1]*(n+1)
         # dp[0] = 0
         # dp[1] = 1
@@ -20,4 +20,3 @@ class Solution(object):
         for i in range(n,-1,-1):
             dp[i] = compute(i)
         return max(dp)
-        
