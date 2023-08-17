@@ -24,7 +24,9 @@ class Solution:
                 take = computeINC(i+1,i)
             else:
                 if rating[pre]<rating[i]:
-                    take = noeGreaterThan[i]
+                    take += noeGreaterThan[i]
+                if rating[pre] > rating[i]:
+                    take += noeLesserThan[i]
             skip = computeINC(i+1,pre)
             
             return take+skip
@@ -46,7 +48,7 @@ class Solution:
         #-------------------------------------
         res1 = computeINC(0,None)
         computeINC.cache_clear()
-        res2 = computeDEC(0,None)
-        computeDEC.cache_clear()
+        # res2 = computeDEC(0,None)
+        # computeDEC.cache_clear()
         #---------------------------------
-        return res1 + res2
+        return res1 #+ res2
