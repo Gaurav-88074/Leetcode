@@ -15,7 +15,7 @@ class Solution:
         #-----------------------------------
         row,col = len(mat),len(mat[0])
         #---------------------------------
-        visited = set()
+        # visited = set() bina isko use krna ka gamand hai
         #---------------------------------
         while queue:
             node = queue.popleft()
