@@ -17,5 +17,5 @@ class Solution:
                 return max(take,skip)
         
         res = compute(0,False)
-        # compute.cache_clear()
+        compute.cache_clear()
         return res
