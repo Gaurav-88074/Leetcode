@@ -8,20 +8,18 @@ class Solution:
             #--------------------------------
             takeIt = float('-inf')
             dropIt = float('-inf')
-            skipIt = float('-inf')
             #--------------------------------
             takeIt = nums[i] + compute(i+1,isRemoved)
             #--------------------------------
             if isRemoved==False:
                 dropIt = compute(i+1,True)
             #--------------------------------
-            # skipIt = compute(i+1,isRemoved)
-            #--------------------------------
-            return max(takeIt,dropIt,skipIt,nums[i])
+            return max(takeIt,dropIt,nums[i])
             #--------------------------------
         res = float('-inf')
         for i,v in enumerate(nums):
             res = max(res,compute(i,False))
         if res==0:
             return max(nums)
+        compute.cache_clear()
         return res
