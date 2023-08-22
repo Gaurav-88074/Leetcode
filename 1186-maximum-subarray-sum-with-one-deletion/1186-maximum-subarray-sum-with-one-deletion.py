@@ -4,7 +4,7 @@ class Solution:
         @lru_cache(None)
         def compute(i,isRemoved):
             if i==n:
-                return 0
+                return float('-inf')
             #--------------------------------
             takeIt = float('-inf')
             dropIt = float('-inf')
@@ -19,7 +19,7 @@ class Solution:
         res = float('-inf')
         for i,v in enumerate(nums):
             res = max(res,compute(i,False))
-        if res==0:
-            return max(nums)
+        # if res==0:
+        #     return max(nums)
         compute.cache_clear()
         return res
