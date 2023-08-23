@@ -12,6 +12,6 @@ class Solution:
         nums = []
         for i in range(lo,hi+1):
             nums.append(i)
-        nums.sort(key = lambda x : compute(x))
+        nums.sort(key = lambda x : compute(x))#use brain
         # print(nums)
         return nums[k-1]
